@@ -1,0 +1,16 @@
+# Start:      sbx env run
+# Stop:       sbx stop docker-sandboxes-claude
+# Entfernen:  sbx env rm
+schemaVersion: "1"
+name: docker-sandboxes-claude
+agent: claude
+workspace: .
+
+ports:
+  - sandbox: 80
+    host: 8080
+  - sandbox: 3306
+    host: 3306
+
+sandboxOptions:
+  memory: 4g
